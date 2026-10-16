@@ -6,8 +6,9 @@ AddDefaultCharset UTF-8
   AddType image/webp .webp
 </IfModule>
 
-DirectoryIndex index.php index.html
+DirectoryIndex index.php
 
+# Redireciona URLs antigas /index.html para a home (mesmo sem o arquivo)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^index\.html$ / [R=301,L]

@@ -499,8 +499,17 @@ a {
 .hero-media {
   position: absolute;
   inset: 0;
-  opacity: .42;
-  mix-blend-mode: screen
+  z-index: 0;
+  opacity: .55
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(4, 32, 46, .55) 0%, rgba(4, 32, 46, .72) 45%, rgba(4, 32, 46, .88) 100%);
+  pointer-events: none
 }
 
 .hero-poster,
@@ -538,37 +547,50 @@ a {
 
 .hero-in {
   position: relative;
-  z-index: 3
+  z-index: 4
 }
 
-.hero h1 {
+.hero h1,
+.hero-title {
   font-size: clamp(52px, 9.5vw, 148px);
   font-weight: 800;
-  max-width: 11ch
+  max-width: 11ch;
+  color: #fff;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 4;
+  text-shadow: 0 6px 28px rgba(0, 0, 0, .45)
 }
 
-.hero h1 .ln {
+.hero h1 .ln,
+.hero-title .ln {
   display: block;
-  overflow: hidden
+  overflow: visible
 }
 
-.hero h1 .ln span {
-  display: inline-block
+.hero h1 .ln span,
+.hero-title .ln span {
+  display: inline-block;
+  opacity: 1;
+  transform: none;
+  color: inherit
 }
 
-.hero h1 .ln:nth-child(2) span {
+.hero h1 .ln:nth-child(2) span,
+.hero-title .ln:nth-child(2) span {
   color: #ffb347
 }
 
-/* Hero sempre visível no 1º paint (evita atraso de LCP por opacity:0) */
+/* Hero sempre visível no 1º paint */
 .hero-in .lead,
 .hero-in .sub,
 .hero-in .cta,
-.hero-in .tags,
-.hero-title,
-.hero-title .ln span {
+.hero-in .tags {
   opacity: 1;
-  transform: none
+  transform: none;
+  position: relative;
+  z-index: 4
 }
 
 @keyframes up {
