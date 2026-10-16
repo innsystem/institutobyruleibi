@@ -1,0 +1,9 @@
+# https://institutobyruleibi.org.br/robots.txt
+User-agent: *
+Allow: /
+
+# Arquivos internos / backup
+Disallow: /index.bundle.backup.html
+
+# Sitemap
+Sitemap: https://institutobyruleibi.org.br/sitemap.xml

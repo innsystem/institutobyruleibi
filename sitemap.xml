@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://institutobyruleibi.org.br/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://institutobyruleibi.org.br/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://institutobyruleibi.org.br/"/>
+    <image:image>
+      <image:loc>https://institutobyruleibi.org.br/media/image_4.webp</image:loc>
+      <image:title>Instituto Renan Byruleibi de Surf — alegria na água</image:title>
+      <image:caption>Criança e instrutor no bodyboard nas ondas de São Conrado</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://institutobyruleibi.org.br/media/image_1.webp</image:loc>
+      <image:title>Atividades do Instituto na Praia de São Conrado</image:title>
+      <image:caption>Crianças e instrutor em alongamento com pranchas de bodyboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://institutobyruleibi.org.br/media/image_2.webp</image:loc>
+      <image:title>Aula de bodyboard na areia</image:title>
+      <image:caption>Instrutor orientando crianças deitadas em bodyboards</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://institutobyruleibi.org.br/media/image_3.webp</image:loc>
+      <image:title>Aprendizado e cuidado no mar</image:title>
+      <image:caption>Crianças em fila durante orientação de bodyboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://institutobyruleibi.org.br/media/image_8.webp</image:loc>
+      <image:title>Renan Byruleibi — Campeão 2025</image:title>
+      <image:caption>Renan Byruleibi celebrando título de bodyboard</image:caption>
+    </image:image>
+  </url>
+</urlset>
