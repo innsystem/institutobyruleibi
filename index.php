@@ -45,9 +45,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="media/image_4.webp" type="image/webp" fetchpriority="high">
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+  <link rel="preload" as="image" href="media/image_4-640.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="style" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
@@ -56,7 +56,6 @@ header('Content-Type: text/html; charset=UTF-8');
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
       rel="stylesheet">
   </noscript>
-  <link rel="stylesheet" href="css/styles.css">
 
   <script type="application/ld+json">
   {
@@ -156,9 +155,12 @@ header('Content-Type: text/html; charset=UTF-8');
     <main id="conteudo">
       <section class="hero dark" aria-labelledby="h-hero">
         <div class="hero-media" aria-hidden="true">
-          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/image_4.webp">
-            <source src="media/hero.mp4" type="video/mp4">
-          </video>
+          <picture class="hero-poster">
+            <source media="(max-width: 900px)" srcset="media/image_4-640.webp" type="image/webp">
+            <source srcset="media/image_4-960.webp" type="image/webp">
+            <img class="hero-poster-img" src="media/image_4.jpeg" alt="" width="960" height="640" fetchpriority="high" decoding="async">
+          </picture>
+          <video class="hero-video" id="hero-video" muted loop playsinline preload="none" data-src="media/hero.mp4"></video>
         </div>
         <div class="wrap hero-in">
           <h1 id="h-hero" class="reveal">
@@ -221,10 +223,13 @@ header('Content-Type: text/html; charset=UTF-8');
           <div class="media reveal reveal-left">
             <div class="zoom">
               <picture>
-                <source srcset="media/image_1.webp" type="image/webp">
+                <source
+                  type="image/webp"
+                  srcset="media/image_1-480.webp 480w, media/image_1-720.webp 720w, media/image_1.webp 1600w"
+                  sizes="(max-width: 700px) 100vw, (max-width: 1000px) 90vw, 520px">
                 <img class="media-fill" src="media/image_1.jpeg"
                   alt="Crianças e instrutor em alongamento na Praia de São Conrado com pranchas de bodyboard"
-                  width="800" height="1000" loading="lazy" decoding="async">
+                  width="720" height="480" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="badge" aria-hidden="true">Sem fins lucrativos</div>
@@ -320,9 +325,12 @@ header('Content-Type: text/html; charset=UTF-8');
             <figure class="g g1 reveal" data-delay="1">
               <div class="zoom">
                 <picture>
-                  <source srcset="media/image_4.webp" type="image/webp">
+                  <source
+                    type="image/webp"
+                    srcset="media/image_4-640.webp 640w, media/image_4-960.webp 960w, media/image_4.webp 1600w"
+                    sizes="(max-width: 700px) 100vw, (max-width: 1000px) 60vw, 700px">
                   <img class="media-fill" src="media/image_4.jpeg" alt="Menina sorrindo no bodyboard com instrutor nas ondas"
-                    width="1200" height="800" loading="lazy" decoding="async">
+                    width="960" height="640" loading="lazy" decoding="async">
                 </picture>
               </div>
               <figcaption class="cap"><b>Alegria na água</b><span>Experiência compartilhada dentro das ondas.</span>
@@ -330,7 +338,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </figure>
             <figure class="g g2 reveal" data-delay="2">
               <div class="zoom">
-                <video class="media-fill" controls playsinline preload="none" poster="media/image_2.webp"
+                <video class="media-fill" controls playsinline preload="none" poster="media/image_2-480.webp"
                   aria-label="Atividades na água">
                   <source src="media/gallery.mp4" type="video/mp4">
                 </video>
@@ -339,9 +347,12 @@ header('Content-Type: text/html; charset=UTF-8');
             <figure class="g g3 reveal" data-delay="3">
               <div class="zoom">
                 <picture>
-                  <source srcset="media/image_2.webp" type="image/webp">
+                  <source
+                    type="image/webp"
+                    srcset="media/image_2-480.webp 480w, media/image_2-800.webp 800w, media/image_2.webp 1600w"
+                    sizes="(max-width: 700px) 100vw, (max-width: 1000px) 40vw, 480px">
                   <img class="media-fill" src="media/image_2.jpeg"
-                    alt="Instrutor orientando crianças deitadas em bodyboards na areia" width="800" height="1000"
+                    alt="Instrutor orientando crianças deitadas em bodyboards na areia" width="800" height="534"
                     loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -351,9 +362,12 @@ header('Content-Type: text/html; charset=UTF-8');
             <figure class="g g4 reveal" data-delay="4">
               <div class="zoom">
                 <picture>
-                  <source srcset="media/image_3.webp" type="image/webp">
+                  <source
+                    type="image/webp"
+                    srcset="media/image_3-640.webp 640w, media/image_3.webp 1600w"
+                    sizes="(max-width: 700px) 100vw, (max-width: 1000px) 40vw, 480px">
                   <img class="media-fill" src="media/image_3.jpeg"
-                    alt="Crianças em fila na areia durante orientação de bodyboard" width="800" height="1000"
+                    alt="Crianças em fila na areia durante orientação de bodyboard" width="640" height="426"
                     loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -363,9 +377,12 @@ header('Content-Type: text/html; charset=UTF-8');
             <figure class="g g5 reveal g-contain" data-delay="5">
               <div class="zoom">
                 <picture>
-                  <source srcset="media/image_5.webp" type="image/webp">
+                  <source
+                    type="image/webp"
+                    srcset="media/image_5-960.webp 960w, media/image_5.webp 1600w"
+                    sizes="(max-width: 700px) 100vw, (max-width: 1000px) 60vw, 700px">
                   <img class="media-fill" src="media/image_5.jpeg"
-                    alt="Registros das atividades do Instituto nas redes sociais" width="1600" height="800"
+                    alt="Registros das atividades do Instituto nas redes sociais" width="960" height="480"
                     loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -408,34 +425,34 @@ header('Content-Type: text/html; charset=UTF-8');
         <div class="wrap">
           <div class="tl" id="reconhecimentos">
             <article class="rec reveal reveal-left" data-delay="1">
-              <div class="yr">2022</div>
-              <div>
+              <div class="rec-media">
+                <picture>
+                  <source srcset="media/image_6.webp" type="image/webp">
+                  <img class="media-fill" src="media/image_6.jpeg"
+                    alt="Renan acompanhando criança na água durante atividade" width="480" height="640" loading="lazy"
+                    decoding="async">
+                </picture>
+              </div>
+              <div class="rec-body">
+                <div class="yr">2022</div>
                 <h3>Medalha Tiradentes</h3>
                 <p>Reconhecimento da Assembleia Legislativa do Estado do Rio de Janeiro pelo ato de heroísmo em São
                   Conrado. O Projeto de Resolução nº 1.158/2022 identifica Renan e descreve o salvamento.</p>
-                <div class="ph media-ph">
-                  <picture>
-                    <source srcset="media/image_6.webp" type="image/webp">
-                    <img class="media-fill" src="media/image_6.jpeg"
-                      alt="Renan acompanhando criança na água durante atividade" width="800" height="500" loading="lazy"
-                      decoding="async">
-                  </picture>
-                </div>
                 <div class="links"><a href="#reconhecimentos">Consultar registro oficial da ALERJ</a></div>
               </div>
             </article>
             <article class="rec reveal reveal-right" data-delay="2">
-              <div class="yr">2025</div>
-              <div>
+              <div class="rec-media">
+                <picture>
+                  <source srcset="media/image_7.webp" type="image/webp">
+                  <img class="media-fill" src="media/image_7.jpeg" alt="Comunidade reunida em atividade ligada ao Instituto"
+                    width="480" height="640" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="rec-body">
+                <div class="yr">2025</div>
                 <h3>Medalha São Francisco de Assis — 3º Milênio</h3>
                 <p>Homenagem na Câmara Municipal do Rio de Janeiro, com registro da solenidade pela TV Câmara Rio.</p>
-                <div class="ph media-ph">
-                  <picture>
-                    <source srcset="media/image_7.webp" type="image/webp">
-                    <img class="media-fill" src="media/image_7.jpeg" alt="Comunidade reunida em atividade ligada ao Instituto"
-                      width="800" height="500" loading="lazy" decoding="async">
-                  </picture>
-                </div>
                 <div class="links">
                   <a href="#reconhecimentos">Assistir à solenidade na TV Câmara Rio</a>
                   <a href="#reconhecimentos">Ver reportagem da TV Câmara Rio</a>
