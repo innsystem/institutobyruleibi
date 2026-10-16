@@ -163,18 +163,18 @@ header('Content-Type: text/html; charset=UTF-8');
           <video class="hero-video" id="hero-video" muted loop playsinline preload="none" data-src="media/hero.mp4"></video>
         </div>
         <div class="wrap hero-in">
-          <h1 id="h-hero" class="reveal">
+          <h1 id="h-hero" class="hero-title">
             <span class="ln"><span>Da Rocinha</span></span>
             <span class="ln"><span>para o mar</span></span>
           </h1>
-          <p class="lead reveal" data-delay="1">O mar como caminho de inclusão e futuro.</p>
-          <p class="sub reveal" data-delay="2">Na Rocinha e em São Conrado, aproximamos crianças e jovens do esporte, da
+          <p class="lead">O mar como caminho de inclusão e futuro.</p>
+          <p class="sub">Na Rocinha e em São Conrado, aproximamos crianças e jovens do esporte, da
             cidadania e do cuidado com o oceano por meio do surf e do bodyboard.</p>
-          <div class="cta reveal" data-delay="3">
+          <div class="cta">
             <a class="btn btn-sun" href="#acoes">Conheça nosso trabalho</a>
             <a class="btn btn-ghost" href="#apoio">Faça parte</a>
           </div>
-          <p class="tags reveal" data-delay="4">Esporte • Segurança no mar • Comunidade</p>
+          <p class="tags">Esporte • Segurança no mar • Comunidade</p>
         </div>
         <div class="scroll" aria-hidden="true"></div>
         <div class="waves" aria-hidden="true">
@@ -225,9 +225,9 @@ header('Content-Type: text/html; charset=UTF-8');
               <picture>
                 <source
                   type="image/webp"
-                  srcset="media/image_1-480.webp 480w, media/image_1-720.webp 720w, media/image_1.webp 1600w"
-                  sizes="(max-width: 700px) 100vw, (max-width: 1000px) 90vw, 520px">
-                <img class="media-fill" src="media/image_1.jpeg"
+                  srcset="media/image_1-480.webp 480w, media/image_1-720.webp 720w, media/image_1-1100.webp 1100w"
+                  sizes="(max-width: 700px) 92vw, (max-width: 1000px) 520px, 480px">
+                <img class="media-fill" src="media/image_1-720.webp"
                   alt="Crianças e instrutor em alongamento na Praia de São Conrado com pranchas de bodyboard"
                   width="720" height="480" loading="lazy" decoding="async">
               </picture>

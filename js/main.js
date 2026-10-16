@@ -119,11 +119,21 @@
 
   /* Header com fundo ao rolar (fallback sem scroll-timeline) */
   const hdr = document.querySelector('.hdr');
-  if (hdr && !CSS.supports('animation-timeline', 'scroll()')) {
+  const supportsScrollTimeline =
+    typeof CSS !== 'undefined' &&
+    CSS.supports &&
+    CSS.supports('animation-timeline', 'scroll()');
+
+  if (hdr && !supportsScrollTimeline) {
+    let ticking = false;
     const onScroll = () => {
-      hdr.classList.toggle('scrolled', window.scrollY > 40);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        hdr.classList.toggle('scrolled', window.scrollY > 40);
+        ticking = false;
+      });
     };
-    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 })();

@@ -553,12 +553,22 @@ a {
 }
 
 .hero h1 .ln span {
-  display: inline-block;
-  transform: translateY(110%) rotate(3deg)
+  display: inline-block
 }
 
 .hero h1 .ln:nth-child(2) span {
   color: #ffb347
+}
+
+/* Hero sempre visível no 1º paint (evita atraso de LCP por opacity:0) */
+.hero-in .lead,
+.hero-in .sub,
+.hero-in .cta,
+.hero-in .tags,
+.hero-title,
+.hero-title .ln span {
+  opacity: 1;
+  transform: none
 }
 
 @keyframes up {
@@ -1550,13 +1560,6 @@ h2 {
   transform: none
 }
 
-.hero h1.reveal.is-inview .ln span {
-  animation: up 1.05s cubic-bezier(.2, .8, .2, 1) both
-}
-
-.hero h1.reveal.is-inview .ln:nth-child(2) span {
-  animation-delay: .16s
-}
 
 /* utilities */
 .skip-link {
