@@ -38,7 +38,6 @@ body {
 }
 
 #inicio {
-  overflow-x: clip;
   max-width: 100%
 }
 
@@ -146,11 +145,12 @@ a {
 
 /* header */
 .hdr {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   height: 84px;
-  margin-bottom: -84px;
   background: rgba(4, 32, 46, .94);
   box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .6)
 }
