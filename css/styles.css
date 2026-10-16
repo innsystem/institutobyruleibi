@@ -520,12 +520,12 @@ a {
 
 .hero-video {
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none
 }
 
-.hero-video.is-active {
-  opacity: 1
+.hero-video:not(.is-active) {
+  opacity: 0
 }
 
 .hero-media .ph {

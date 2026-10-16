@@ -160,7 +160,9 @@ header('Content-Type: text/html; charset=UTF-8');
             <source srcset="media/image_4-960.webp" type="image/webp">
             <img class="hero-poster-img" src="media/image_4.jpeg" alt="" width="960" height="640" fetchpriority="high" decoding="async">
           </picture>
-          <video class="hero-video" id="hero-video" muted loop playsinline preload="none" data-src="media/hero.mp4"></video>
+          <video class="hero-video is-active" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/image_4-640.webp">
+            <source src="media/hero.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="wrap hero-in">
           <h1 id="h-hero" class="hero-title">

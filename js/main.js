@@ -1,24 +1,20 @@
 (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Hero video: só no desktop (mobile usa poster leve = LCP mais rápido) */
+  /* Hero video: garante autoplay (mobile + desktop); pausa se reduced-motion */
   const heroVideo = document.getElementById('hero-video');
   if (heroVideo) {
-    const canPlayHero =
-      !prefersReducedMotion &&
-      window.matchMedia('(min-width: 901px)').matches &&
-      heroVideo.dataset.src;
-
-    if (canPlayHero) {
-      const source = document.createElement('source');
-      source.src = heroVideo.dataset.src;
-      source.type = 'video/mp4';
-      heroVideo.appendChild(source);
+    if (prefersReducedMotion) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.classList.remove('is-active');
+    } else {
       heroVideo.classList.add('is-active');
       const play = () => heroVideo.play().catch(() => {});
-      if (heroVideo.readyState >= 2) play();
-      else heroVideo.addEventListener('loadeddata', play, { once: true });
-      heroVideo.load();
+      play();
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) play();
+      });
     }
   }
 
