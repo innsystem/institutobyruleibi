@@ -437,7 +437,7 @@ header('Content-Type: text/html; charset=UTF-8');
               </div>
               <div class="rec-body">
                 <div class="yr">2025</div>
-                <h3>Condecorações 2022-2025 - Medalha Tiradentes e Medalha São Francisco de Assis</h3>
+                <h3>Condecorações 2022-2025 <br> Medalha Tiradentes e Medalha São Francisco de Assis</h3>
                 <p>Reconhecimento pela ALERJ com a Medalha Tiradentes (Resolução nº 908/2022) pelo salvamento em São Conrado, e pela Câmara Municipal do Rio de Janeiro com a Medalha São Francisco de Assis.</p>
                 <div class="links">
                   <a href="#reconhecimentos">Assistir à solenidade na TV Câmara Rio</a>
