@@ -405,7 +405,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <section class="story pad" id="renan" aria-labelledby="h-renan">
         <div class="wrap srow">
           <div class="vid reveal reveal-left">
-            <video class="media-fill story-video" controls playsinline preload="none" poster="media/image_8.webp"
+            <video class="media-fill story-video" controls playsinline preload="none" poster="media/video_capa.jpeg"
               aria-label="Renan Byruleibi">
               <source src="media/video_resgate.mp4" type="video/mp4">
             </video>
@@ -426,28 +426,11 @@ header('Content-Type: text/html; charset=UTF-8');
         </div>
         <div class="wrap">
           <div class="tl" id="reconhecimentos">
-            <article class="rec reveal reveal-left" data-delay="1">
-              <div class="rec-media">
-                <picture>
-                  <source srcset="media/image_6.webp" type="image/webp">
-                  <img class="media-fill" src="media/image_6.jpeg"
-                    alt="Renan acompanhando criança na água durante atividade" width="480" height="640" loading="lazy"
-                    decoding="async">
-                </picture>
-              </div>
-              <div class="rec-body">
-                <div class="yr">2022</div>
-                <h3>Medalha Tiradentes</h3>
-                <p>Reconhecimento da Assembleia Legislativa do Estado do Rio de Janeiro pelo ato de heroísmo em São
-                  Conrado. O Projeto de Resolução nº 1.158/2022 identifica Renan e descreve o salvamento.</p>
-                <div class="links"><a href="#reconhecimentos">Consultar registro oficial da ALERJ</a></div>
-              </div>
-            </article>
             <article class="rec reveal reveal-right" data-delay="2">
               <div class="rec-media">
                 <picture>
-                  <source srcset="media/image_7.webp" type="image/webp">
-                  <img class="media-fill" src="media/image_7.jpeg" alt="Comunidade reunida em atividade ligada ao Instituto"
+                  <source srcset="media/foto_ano_2025.jpeg" type="image/webp">
+                  <img class="media-fill" src="media/foto_ano_2025.jpeg" alt="Comunidade reunida em atividade ligada ao Instituto"
                     width="480" height="640" loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -455,6 +438,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 <div class="yr">2025</div>
                 <h3>Medalha São Francisco de Assis — 3º Milênio</h3>
                 <p>Homenagem na Câmara Municipal do Rio de Janeiro, com registro da solenidade pela TV Câmara Rio.</p>
+                <p>Reconhecimento pela ALERJ com a Medalha Tiradentes (Resolução nº 908/2022) pelo salvamento em São Conrado, e pela Câmara Municipal do Rio de Janeiro com a Medalha São Francisco de Assis.</p>
                 <div class="links">
                   <a href="#reconhecimentos">Assistir à solenidade na TV Câmara Rio</a>
                   <a href="#reconhecimentos">Ver reportagem da TV Câmara Rio</a>
