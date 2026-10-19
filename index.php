@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 header('Content-Type: text/html; charset=UTF-8');
 ?>
@@ -58,33 +59,33 @@ header('Content-Type: text/html; charset=UTF-8');
   </noscript>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "Instituto Renan Byruleibi de Surf",
-    "alternateName": "Instituto Byruleibi",
-    "url": "https://institutobyruleibi.org.br/",
-    "logo": "https://institutobyruleibi.org.br/media/image_1.webp",
-    "image": "https://institutobyruleibi.org.br/media/image_4.webp",
-    "description": "Associação civil sem fins lucrativos que aproxima crianças e jovens da Rocinha e São Conrado do surf, do bodyboard, da cidadania e do cuidado com o oceano.",
-    "taxID": "62.977.846/0001-33",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "addressCountry": "BR"
-    },
-    "areaServed": ["Rocinha", "São Conrado", "Rio de Janeiro"],
-    "sameAs": [
-      "https://www.instagram.com/instituto.byruleibi/",
-      "https://www.instagram.com/renanbyruleybyoficial/"
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "Renan Souza da Conceição",
-      "alternateName": "Renan Byruleibi"
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Instituto Renan Byruleibi de Surf",
+      "alternateName": "Instituto Byruleibi",
+      "url": "https://institutobyruleibi.org.br/",
+      "logo": "https://institutobyruleibi.org.br/media/image_1.webp",
+      "image": "https://institutobyruleibi.org.br/media/image_4.webp",
+      "description": "Associação civil sem fins lucrativos que aproxima crianças e jovens da Rocinha e São Conrado do surf, do bodyboard, da cidadania e do cuidado com o oceano.",
+      "taxID": "62.977.846/0001-33",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "addressCountry": "BR"
+      },
+      "areaServed": ["Rocinha", "São Conrado", "Rio de Janeiro"],
+      "sameAs": [
+        "https://www.instagram.com/instituto.byruleibi/",
+        "https://www.instagram.com/renanbyruleybyoficial/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Renan Souza da Conceição",
+        "alternateName": "Renan Byruleibi"
+      }
     }
-  }
   </script>
 </head>
 
