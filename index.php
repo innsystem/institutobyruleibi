@@ -407,7 +407,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <div class="vid reveal reveal-left">
             <video class="media-fill story-video" controls playsinline preload="none" poster="media/image_8.webp"
               aria-label="Renan Byruleibi">
-              <source src="media/renan.mp4" type="video/mp4">
+              <source src="media/video_resgate.mp4" type="video/mp4">
             </video>
           </div>
           <div>
