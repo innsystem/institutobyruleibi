@@ -47,8 +47,8 @@ header('Content-Type: text/html; charset=UTF-8');
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="media/image_4-640.webp" type="image/webp" fetchpriority="high">
-  <link rel="preload" as="style" href="css/styles.css?1">
-  <link rel="stylesheet" href="css/styles.css?1">
+  <link rel="preload" as="style" href="css/styles.css?2">
+  <link rel="stylesheet" href="css/styles.css?2">
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
@@ -604,7 +604,7 @@ header('Content-Type: text/html; charset=UTF-8');
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?1" defer></script>
 </body>
 
 </html>
