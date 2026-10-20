@@ -485,7 +485,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </div>
             <div>
               <dt>CNPJ</dt>
-              <dd>62.977.846/0001-33</dd>
+              <dd id="cnpj-pix">62.977.846/0001-33</dd>
             </div>
             <div>
               <dt>Natureza</dt>
@@ -540,10 +540,13 @@ header('Content-Type: text/html; charset=UTF-8');
                 </svg>
               </div>
               <h3>Apoie com uma doação</h3>
-              <p>Fale com a equipe pelo canal oficial para conhecer as necessidades atuais e receber os dados de doação.
+              <p>Copie a chave PIX (CNPJ do Instituto) e contribua diretamente. Qualquer valor fortalece as atividades.
               </p>
-              <a class="btn btn-line" href="https://www.instagram.com/instituto.byruleibi/" target="_blank"
-                rel="noopener noreferrer">Conversar sobre doação<span class="sr"> (abre em nova aba)</span></a>
+              <button type="button" class="btn btn-line" id="btn-copy-pix"
+                data-pix="62977846000133"
+                data-pix-label="62.977.846/0001-33">
+                Copiar Chave PIX
+              </button>
             </article>
           </div>
         </div>
@@ -600,6 +603,7 @@ header('Content-Type: text/html; charset=UTF-8');
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 

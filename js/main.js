@@ -132,4 +132,70 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
   }
+
+  /* Copiar chave PIX (CNPJ) */
+  const pixBtn = document.getElementById('btn-copy-pix');
+  if (pixBtn) {
+    const pixKey =
+      pixBtn.getAttribute('data-pix') ||
+      (document.getElementById('cnpj-pix')?.textContent || '').replace(/\D/g, '') ||
+      '62977846000133';
+    const pixLabel =
+      pixBtn.getAttribute('data-pix-label') ||
+      document.getElementById('cnpj-pix')?.textContent?.trim() ||
+      '62.977.846/0001-33';
+
+    const notifyCopied = () => {
+      if (typeof Swal !== 'undefined') {
+        Swal.fire({
+          icon: 'success',
+          title: 'Chave PIX copiada!',
+          html: `CNPJ <strong>${pixLabel}</strong> pronto para colar no app do banco.`,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#12808f',
+          timer: 3500,
+          timerProgressBar: true,
+        });
+        return;
+      }
+      alert(`Chave PIX copiada!\n${pixLabel}`);
+    };
+
+    const notifyError = () => {
+      if (typeof Swal !== 'undefined') {
+        Swal.fire({
+          icon: 'error',
+          title: 'Não foi possível copiar',
+          text: `Copie manualmente: ${pixLabel}`,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#ff6b3d',
+        });
+        return;
+      }
+      alert(`Não foi possível copiar. Chave PIX: ${pixLabel}`);
+    };
+
+    const copyPix = async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(pixKey);
+        } else {
+          const input = document.createElement('textarea');
+          input.value = pixKey;
+          input.setAttribute('readonly', '');
+          input.style.position = 'fixed';
+          input.style.left = '-9999px';
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+        }
+        notifyCopied();
+      } catch (err) {
+        notifyError();
+      }
+    };
+
+    pixBtn.addEventListener('click', copyPix);
+  }
 })();
