@@ -1726,6 +1726,10 @@ h2 {
   border: 0
 }
 
+.nobr {
+  white-space: nowrap
+}
+
 .nav-cta {
   min-height: 44px;
   padding: 8px 22px;

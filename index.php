@@ -548,7 +548,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 </svg>
               </div>
               <h3>Apoie com uma doação</h3>
-              <p>Copie a chave PIX <b>62.977.846/0001-33</b> e contribua diretamente. Qualquer valor fortalece as atividades.
+              <p>Copie a chave PIX <b class="nobr">62.977.846/0001-33</b> e contribua diretamente. Qualquer valor fortalece as atividades.
               </p>
               <button type="button" class="btn btn-line js-copy-pix"
                 data-pix="62977846000133"
