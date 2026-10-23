@@ -133,9 +133,17 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* Copiar chave PIX (CNPJ) */
-  const pixBtn = document.getElementById('btn-copy-pix');
-  if (pixBtn) {
+  /* Copiar chave PIX (CNPJ) — qualquer .js-copy-pix */
+  const stopYoutubeInSwal = () => {
+    const container = typeof Swal !== 'undefined' ? Swal.getHtmlContainer() : null;
+    if (!container) return;
+    container.querySelectorAll('iframe').forEach((iframe) => {
+      iframe.src = '';
+      iframe.removeAttribute('src');
+    });
+  };
+
+  document.querySelectorAll('.js-copy-pix').forEach((pixBtn) => {
     const pixKey =
       pixBtn.getAttribute('data-pix') ||
       (document.getElementById('cnpj-pix')?.textContent || '').replace(/\D/g, '') ||
@@ -197,5 +205,55 @@
     };
 
     pixBtn.addEventListener('click', copyPix);
-  }
+  });
+
+  /* Modal YouTube (solenidade) — para o vídeo ao fechar / clique fora */
+  const openYoutubeModal = (videoId, title) => {
+    const safeId = String(videoId || '').replace(/[^\w-]/g, '');
+    if (!safeId) return;
+
+    const embed = `
+      <div class="yt-modal-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/${safeId}?autoplay=1&rel=0"
+          title="${title || 'Vídeo'}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>`;
+
+    if (typeof Swal !== 'undefined') {
+      Swal.fire({
+        title: title || 'Assistir',
+        html: embed,
+        width: Math.min(920, window.innerWidth - 32),
+        padding: '1.25rem',
+        background: '#04202e',
+        color: '#fff',
+        showConfirmButton: false,
+        showCloseButton: true,
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        focusConfirm: false,
+        customClass: {
+          popup: 'yt-swal-popup',
+          title: 'yt-swal-title',
+          closeButton: 'yt-swal-close',
+        },
+        willClose: stopYoutubeInSwal,
+        didClose: stopYoutubeInSwal,
+        didDestroy: stopYoutubeInSwal,
+      });
+      return;
+    }
+
+    window.open(`https://www.youtube.com/watch?v=${safeId}`, '_blank', 'noopener,noreferrer');
+  };
+
+  document.querySelectorAll('.js-yt-modal').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openYoutubeModal(btn.getAttribute('data-youtube'), btn.getAttribute('data-yt-title'));
+    });
+  });
 })();

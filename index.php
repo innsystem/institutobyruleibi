@@ -108,6 +108,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <a href="#acoes">Ações</a>
           <a href="#galeria">Galeria</a>
           <a href="#renan">Renan</a>
+          <a href="#quentinhas">Quentinhas</a>
           <a href="#transparencia">Transparência</a>
           <a class="btn btn-sun nav-cta" href="#apoio">Faça parte</a>
         </nav>
@@ -142,9 +143,10 @@ header('Content-Type: text/html; charset=UTF-8');
           <a data-close-menu href="#acoes"><small>02</small>Ações</a>
           <a data-close-menu href="#galeria"><small>03</small>Galeria</a>
           <a data-close-menu href="#renan"><small>04</small>Renan</a>
-          <a data-close-menu href="#transparencia"><small>05</small>Transparência</a>
-          <a data-close-menu href="#apoio"><small>06</small>Faça parte</a>
-          <a data-close-menu href="#contato"><small>07</small>Contato</a>
+          <a data-close-menu href="#quentinhas"><small>05</small>Quentinhas</a>
+          <a data-close-menu href="#transparencia"><small>06</small>Transparência</a>
+          <a data-close-menu href="#apoio"><small>07</small>Faça parte</a>
+          <a data-close-menu href="#contato"><small>08</small>Contato</a>
         </nav>
         <div class="oc-foot">
           <a data-close-menu class="btn btn-sun" href="#apoio">Faça parte</a>
@@ -440,8 +442,14 @@ header('Content-Type: text/html; charset=UTF-8');
                 <h3>Medalha Tiradentes e Medalha São Francisco de Assis</h3>
                 <p>Reconhecimento pela ALERJ com a Medalha Tiradentes (Resolução nº 908/2022) pelo salvamento em São Conrado, e pela Câmara Municipal do Rio de Janeiro com a Medalha São Francisco de Assis.</p>
                 <div class="links">
-                  <a href="#reconhecimentos">Assistir à solenidade na TV Câmara Rio</a>
-                  <a href="#reconhecimentos">Ver reportagem da TV Câmara Rio</a>
+                  <button type="button" class="link-btn js-yt-modal" data-youtube="I5ks5fccR4Y" data-yt-title="Solenidade — TV Câmara Rio">
+                    Assistir à solenidade na TV Câmara Rio
+                  </button>
+                  <a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2022/04/19/bodyboarder-que-resgatou-salva-vidas-do-mar-e-indicado-para-receber-medalha-tiradentes-na-alerj.ghtml"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver reportagem no G1
+                    <span class="sr"> (abre em nova aba)</span>
+                  </a>
                 </div>
               </div>
             </article>
@@ -542,12 +550,56 @@ header('Content-Type: text/html; charset=UTF-8');
               <h3>Apoie com uma doação</h3>
               <p>Copie a chave PIX <b>62.977.846/0001-33</b> e contribua diretamente. Qualquer valor fortalece as atividades.
               </p>
-              <button type="button" class="btn btn-line" id="btn-copy-pix"
+              <button type="button" class="btn btn-line js-copy-pix"
                 data-pix="62977846000133"
                 data-pix-label="62.977.846/0001-33">
                 Clique para Copiar
               </button>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quentinhas pad" id="quentinhas" aria-labelledby="h-quentinhas">
+        <div class="wrap">
+          <div class="q-head reveal">
+            <span class="eyebrow">Alimentação de Base</span>
+            <h2 id="h-quentinhas">Seu apoio também alimenta.</h2>
+            <p class="intro">Doe pelo Pix e ajude a levar quentinhas a quem precisa.</p>
+            <button type="button" class="btn btn-sun js-copy-pix"
+              data-pix="62977846000133"
+              data-pix-label="62.977.846/0001-33">
+              Clique para Copiar
+            </button>
+          </div>
+          <div class="qgrid">
+            <figure class="q-item q-photo reveal" data-delay="1">
+              <div class="zoom">
+                <picture>
+                  <source srcset="media/quentinhas.jpeg" type="image/jpeg">
+                  <img class="media-fill" src="media/quentinhas.jpeg"
+                    alt="Renan e crianças com mesa de lanches e quentinhas na praia"
+                    width="800" height="800" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="q-cap">Momentos de cuidado e alimentação com as crianças.</figcaption>
+            </figure>
+            <figure class="q-item q-video reveal" data-delay="2">
+              <div class="zoom">
+                <video class="media-fill" controls playsinline preload="none" poster="media/quentinhas_2.jpeg"
+                  aria-label="Vídeo das quentinhas — parte 1">
+                  <source src="media/video_quentinha_1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </figure>
+            <figure class="q-item q-video reveal" data-delay="3">
+              <div class="zoom">
+                <video class="media-fill" controls playsinline preload="none" poster="media/quentinhas_3.jpg"
+                  aria-label="Vídeo das quentinhas — parte 2">
+                  <source src="media/video_quentinha_2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </figure>
           </div>
         </div>
       </section>
@@ -604,7 +656,7 @@ header('Content-Type: text/html; charset=UTF-8');
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
-  <script src="js/main.js?1" defer></script>
+  <script src="js/main.js?3" defer></script>
 </body>
 
 </html>

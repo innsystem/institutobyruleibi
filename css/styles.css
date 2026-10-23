@@ -472,6 +472,10 @@ a {
   --d: .54s
 }
 
+.oc.open .oc-nav a:nth-child(8) {
+  --d: .60s
+}
+
 .oc-foot {
   margin-top: 30px;
   display: flex;
@@ -1300,15 +1304,55 @@ h2 {
   margin-top: 16px
 }
 
-.links a {
+.links a,
+.links .link-btn {
   color: #ffb347;
   font-weight: 700;
   text-decoration: underline;
-  text-underline-offset: 4px
+  text-underline-offset: 4px;
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left
 }
 
-.links a:hover {
+.links a:hover,
+.links .link-btn:hover {
   color: #fff
+}
+
+.yt-modal-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000
+}
+
+.yt-modal-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0
+}
+
+.yt-swal-popup {
+  border: 1px solid rgba(255, 255, 255, .14) !important;
+  border-radius: 20px !important
+}
+
+.yt-swal-title {
+  font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif !important;
+  font-size: clamp(18px, 2.5vw, 24px) !important;
+  color: #ffb347 !important
+}
+
+.yt-swal-close {
+  color: #fff !important
 }
 
 .profile {
@@ -1391,6 +1435,67 @@ h2 {
 /* support */
 .sup {
   background: #f6efe1
+}
+
+/* Quentinhas */
+.quentinhas {
+  background: linear-gradient(180deg, #08384a 0%, #04202e 100%);
+  color: #fff
+}
+
+.quentinhas .eyebrow {
+  color: #ffb347
+}
+
+.quentinhas .intro {
+  color: rgba(255, 255, 255, .78)
+}
+
+.q-head {
+  max-width: 640px
+}
+
+.q-head .btn {
+  margin-top: 28px
+}
+
+.qgrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 56px;
+  align-items: stretch
+}
+
+.q-item {
+  margin: 0;
+  position: relative
+}
+
+.q-item .zoom {
+  height: 100%;
+  min-height: 280px;
+  border-radius: 24px;
+  background: rgba(0, 0, 0, .25)
+}
+
+.q-item .zoom img,
+.q-item .zoom video {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 24px
+}
+
+.q-photo {
+  grid-row: span 1
+}
+
+.q-cap {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .7)
 }
 
 .ugrid {
@@ -1750,6 +1855,14 @@ video {
     width: 100%
   }
 
+  .qgrid {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .q-photo {
+    grid-column: 1 / -1
+  }
+
   .rec {
     grid-template-columns: minmax(140px, 220px) 1fr;
     gap: 20px;
@@ -1767,6 +1880,18 @@ video {
 
   .ugrid {
     grid-template-columns: 1fr
+  }
+
+  .qgrid {
+    grid-template-columns: 1fr;
+    gap: 16px
+  }
+
+  .q-item .zoom,
+  .q-item .zoom img,
+  .q-item .zoom video {
+    min-height: 240px;
+    aspect-ratio: 4/3
   }
 
   .sgrid {
