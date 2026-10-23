@@ -332,9 +332,9 @@ header('Content-Type: text/html; charset=UTF-8');
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="media/image_4-640.webp 640w, media/image_4-960.webp 960w, media/image_4.webp 1600w"
+                    srcset="media/image_4-640.webp 640w, media/image_4-960.webp 960w, media/image_4.webp 1280w"
                     sizes="(max-width: 700px) 100vw, (max-width: 1000px) 60vw, 700px">
-                  <img class="media-fill" src="media/image_4.jpeg" alt="Menina sorrindo no bodyboard com instrutor nas ondas"
+                  <img class="media-fill" src="media/image_4.jpeg" alt="Criança e instrutor no bodyboard nas ondas"
                     width="960" height="640" loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -343,7 +343,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </figure>
             <figure class="g g2 reveal" data-delay="2">
               <div class="zoom">
-                <video class="media-fill" controls playsinline preload="none" poster="media/image_2-480.webp"
+                <video class="media-fill" controls playsinline preload="none" poster="media/capa_video.jpg"
                   aria-label="Atividades na água">
                   <source src="media/gallery.mp4" type="video/mp4">
                 </video>
@@ -369,9 +369,9 @@ header('Content-Type: text/html; charset=UTF-8');
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="media/image_3-640.webp 640w, media/image_3.webp 1600w"
+                    srcset="media/image_9-640.webp 640w, media/image_9.webp 1280w"
                     sizes="(max-width: 700px) 100vw, (max-width: 1000px) 40vw, 480px">
-                  <img class="media-fill" src="media/image_3.jpeg"
+                  <img class="media-fill" src="media/image_9.jpeg"
                     alt="Crianças em fila na areia durante orientação de bodyboard" width="640" height="426"
                     loading="lazy" decoding="async">
                 </picture>
@@ -442,7 +442,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 <h3>Medalha Tiradentes e Medalha São Francisco de Assis</h3>
                 <p>Reconhecimento pela ALERJ com a Medalha Tiradentes (Resolução nº 908/2022) pelo salvamento em São Conrado, e pela Câmara Municipal do Rio de Janeiro com a Medalha São Francisco de Assis.</p>
                 <div class="links">
-                  <button type="button" class="link-btn js-yt-modal" data-youtube="I5ks5fccR4Y" data-yt-title="Solenidade — TV Câmara Rio">
+                  <button type="button" class="link-btn js-yt-modal" data-youtube="RTSYJeN8jMI" data-yt-title="Solenidade — TV Câmara Rio">
                     Assistir à solenidade na TV Câmara Rio
                   </button>
                   <a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2022/04/19/bodyboarder-que-resgatou-salva-vidas-do-mar-e-indicado-para-receber-medalha-tiradentes-na-alerj.ghtml"
