@@ -1439,8 +1439,29 @@ h2 {
 
 /* Quentinhas */
 .quentinhas {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(180deg, #08384a 0%, #04202e 100%);
   color: #fff
+}
+
+.quentinhas .waves {
+  top: -2px;
+  bottom: auto;
+  transform: scaleY(-1);
+  height: 130px
+}
+
+.quentinhas .waves svg,
+.quentinhas .waves svg:nth-child(1) {
+  opacity: 1;
+  height: 100%;
+  animation-duration: 26s
+}
+
+.q-in {
+  position: relative;
+  z-index: 1
 }
 
 .quentinhas .eyebrow {
@@ -1644,6 +1665,50 @@ h2 {
 .ftr a {
   color: #fff;
   text-underline-offset: 4px
+}
+
+.ftr-links {
+  text-align: right
+}
+
+.companyDeveloper {
+  display: block;
+  width: fit-content;
+  margin: 18px 0 0 auto;
+  text-align: right;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .75);
+  font-size: 13px;
+  line-height: 0.5
+}
+
+.companyDeveloper b {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .85)
+}
+
+.companyDeveloper .img-fluid {
+  display: block;
+  margin: 8px 0 0 auto;
+  max-width: 120px;
+  height: auto
+}
+
+@media (max-width: 720px) {
+  .ftr-links {
+    text-align: left
+  }
+
+  .companyDeveloper {
+    margin-left: 0;
+    text-align: left
+  }
+
+  .companyDeveloper .img-fluid {
+    margin-left: 0
+  }
 }
 
 /* reveal animations (IntersectionObserver) */

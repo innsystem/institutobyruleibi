@@ -561,7 +561,12 @@ header('Content-Type: text/html; charset=UTF-8');
       </section>
 
       <section class="quentinhas pad" id="quentinhas" aria-labelledby="h-quentinhas">
-        <div class="wrap">
+        <div class="waves" aria-hidden="true">
+          <svg viewBox="0 0 2880 120" preserveAspectRatio="none">
+            <path fill="#f6efe1" d="M0 70q180-50 360 0t360 0 360 0 360 0 360 0 360 0 360 0 360 0V120H0z" />
+          </svg>
+        </div>
+        <div class="wrap q-in">
           <div class="q-head reveal">
             <span class="eyebrow">Alimentação de Base</span>
             <h2 id="h-quentinhas">Seu apoio também alimenta.</h2>
@@ -607,7 +612,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <section class="ct" id="contato" aria-labelledby="h-ct">
         <div class="waves" aria-hidden="true">
           <svg viewBox="0 0 2880 120" preserveAspectRatio="none">
-            <path fill="#f6efe1" d="M0 70q180-50 360 0t360 0 360 0 360 0 360 0 360 0 360 0 360 0V120H0z" />
+            <path fill="#04202e" d="M0 70q180-50 360 0t360 0 360 0 360 0 360 0 360 0 360 0 360 0V120H0z" />
           </svg>
         </div>
         <div class="wrap ct-in">
@@ -646,11 +651,15 @@ header('Content-Type: text/html; charset=UTF-8');
             CNPJ 62.977.846/0001-33 · Rio de Janeiro/RJ<br>
             Esporte, cidadania e cuidado com o oceano.
           </div>
-          <div>
-            <a href="#privacidade">Privacidade</a> ·
+          <div class="ftr-links">
             <a href="#inicio">Voltar ao início</a>
+            <a href="https://innsystem.com.br" target="_blank" rel="noopener noreferrer" class="companyDeveloper">
+              <b>Tecnologia:</b><br>
+              <img src="media/logo_innsystem.png" class="img-fluid" alt="InnSystem Inovação em Sistemas" width="120" height="28" loading="lazy" decoding="async">
+            </a>
           </div>
         </div>
+
       </div>
     </footer>
   </div>
